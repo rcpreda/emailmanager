@@ -1,0 +1,8 @@
+RewriteEngine On 
+RewriteBase / 
+RewriteRule ^fonts - [L,NC]
+RewriteRule ^index\.php$ - [L] 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !\.(gif|png|jpg|jpeg|jfif|bmp|css|js|fonts|favicon.ico)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule . /index.php [L] 

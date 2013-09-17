@@ -1,0 +1,11 @@
+<?php 
+
+define('ROOT_PATH', realpath(__DIR__) . DIRECTORY_SEPARATOR);
+
+define('REAL_PATH', ROOT_PATH . '..' .DIRECTORY_SEPARATOR);
+
+define ('APPLICATION_PATH', ROOT_PATH . '..' .DIRECTORY_SEPARATOR . 'root' .DIRECTORY_SEPARATOR );
+
+define('APPLICATION_LIBS', ROOT_PATH . '..' .DIRECTORY_SEPARATOR . 'libs' .DIRECTORY_SEPARATOR );
+
+include APPLICATION_PATH . 'bootstrap.php';

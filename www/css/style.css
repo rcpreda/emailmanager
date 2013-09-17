@@ -1,0 +1,201 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+}
+
+.align-right {
+    text-align: right;
+}
+
+.ui-tabs .ui-widget-header {
+    border: 0px;
+    background: transparent;
+}
+
+.ui-widget-content {
+    border: 0;
+    background: transparent;
+}
+
+.ui-tabs .ui-tabs-panel {
+    background: #E6E7E9;
+    border-left: 1px solid #0088CC;
+    border-right: 1px solid #0088CC;
+    border-bottom: 1px solid #0088CC;
+    border-top: 1px solid #0088CC;
+    font-weight: normal;
+
+}
+
+.ui-tabs .ui-tabs-nav {
+    padding: 0;
+    margin-bottom: -1px;
+
+}
+
+.ui-tabs .ui-tabs-nav li {
+    border-bottom: none;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    color: #5EA7DB;
+    font-weight: bold;
+    text-transform:uppercase;
+    font-size: 14px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    margin: 10px 3px 0 0;
+    color: white;
+}
+
+
+.ui-tabs li.ui-state-default {
+    background-color: transparent;
+    border-top: 0px solid #0088CC;
+    border-right: 0px solid #0088CC;
+    border-left: 0px solid #0088CC;
+    border-bottom: 0px solid #0088CC;
+    z-index: 999;
+    width: auto;
+
+}
+
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+    text-decoration: none;
+}
+
+
+.ui-tabs li.ui-state-hover {
+    background-color: #0088CC;
+    background-image: none;
+    color: white;
+}
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    color: black;
+    text-transform:uppercase;
+    border-bottom: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    background-color: #E6E7E9;
+    border-top: 1px solid #0088CC;
+    border-right: 1px solid #0088CC;
+    border-left: 1px solid #0088CC;
+    border-bottom: 0px solid #0088CC;
+}
+
+.ui-state-active, .ui-state-active a, .ui-state-hover a {
+    outline: none;
+    color: white;
+}
+
+.ui-state-hover a:hover {
+    color:black;
+}
+
+.ui-tabs .ui-state-default a:hover {
+    color:white;
+}
+
+
+.tab-content { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+               font-size: 17px;
+               font-weight: normal;
+}
+
+
+div.hero-unit {
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.inweb {
+    text-align: right; padding-top: 15px;
+}
+
+.acordeon-responsive {
+    display: none;
+}
+
+
+
+.ui-accordion .ui-accordion-content {
+    padding: 5px;
+    margin-top: -3px;
+}
+
+
+#accordion .ui-state-default {
+    background-image: none;
+    background-color: #0088CC;
+    color: white;
+
+}
+
+.ui-accordion-content {
+    background-color: #E6E7E9;
+    border: 1px solid #0088CC;
+    margin-bottom: 10px;
+}
+.ui-accordion .ui-accordion-header {
+    margin-bottom: 3px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#accordion .ui-state-default {
+    border: 1px solid #0088CC;
+
+}
+
+
+
+@media (max-width: 767px) {
+
+    body {
+        padding: 0;
+    }
+
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+    .hero-unit h1 {
+        font-size:33px;
+    }
+
+    .hero-unit h2 {
+        font-size:28px;
+    }
+
+    .hero-unit h3 {
+        font-size:25px;
+    }
+
+    .hero-unit {
+        padding: 8px;
+    }
+
+    .inweb {
+        text-align: center; padding-top: 0px;
+    }
+
+    .tabs-responsive {
+        display: none;
+    }
+
+    .acordeon-responsive {
+        display: block;
+    }
+
+}
