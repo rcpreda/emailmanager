@@ -55,4 +55,29 @@ class MailService {
         
     }
     
+    /**
+     * @param int $emailId
+     * @return \libs\Entities\Email
+     */
+    public function getAllEmails() {
+        
+        $query = "SELECT * FROM email";
+        $proc = $this->db->prepare($query);
+        $proc->bindParam(1, $emailId, \PDO::PARAM_INT);
+        $proc->execute();
+        
+        $rowset = NULL;
+        do {
+            $rowset[] = $proc->fetchAll(\PDO::FETCH_ASSOC);
+        } while ($proc->nextRowset());
+        if (!empty($rowset)) {
+           return array_map(array($this, "mapElements"), array_shift($rowset));
+        }
+        return NULL;
+    }
+    
+    public function mapElements($row) {
+        return new Email($row);
+    }
+    
 }
