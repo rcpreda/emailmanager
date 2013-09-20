@@ -41,9 +41,9 @@ class Email {
     protected $to;
     
     /**
-     * @var string $fromTo
+     * @var string $toName
      */
-    protected $fromTo;
+    protected $toName;
     
     /**
      * @var string $dc
@@ -168,14 +168,12 @@ class Email {
         $this->fromName = $fromName;
     }
 
-    public function getFromTo() {
-        return $this->fromTo;
+    public function getToName() {
+        return $this->toName;
     }
 
-    public function setFromTo($fromTo) {
-        $this->fromTo = $fromTo;
+    public function setToName($toName) {
+        $this->toName = $toName;
     }
-
-
     
 }
