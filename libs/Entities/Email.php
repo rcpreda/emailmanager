@@ -51,6 +51,11 @@ class Email {
     protected $bcc;
     
     /**
+     * @var string $dc
+     */
+    protected $cc;
+    
+    /**
      * @var datetime $dc
      */
     protected $dc;
@@ -63,19 +68,19 @@ class Email {
     public function __construct(array $info) {
         
         if (!isset($info['subject']) || !$info['subject'])
-            throw new Exception('Subject is missing!');
+            throw new \Exception('Subject is missing!');
         
         if (!isset($info['content']) || !$info['content'])
-            throw new Exception('Message is missing!');
+            throw new \Exception('Message is missing!');
         
         if (!isset($info['from']) || !$info['from'])
-            throw new Exception('From email missing!');
+            throw new \Exception('From email missing!');
         
         if (!isset($info['to']) || !$info['to'])
-            throw new Exception('From email missing!');
+            throw new \Exception('From email missing!');
         
         
-        $this->emailId = $info['emailId'];
+        $this->emailId = isset($info['emailId']) ? $info['emailId'] : NULL;
         $this->emailName = $info['emailName'];
         $this->subject = $info['subject'];
         $this->content = $info['content'];
@@ -84,8 +89,9 @@ class Email {
         $this->to = $info['to'];
         $this->toName = $info['toName'];
         $this->bcc = $info['bcc'];
-        $this->dc = $info['dc'];
-        $this->dm = $info['dm'];
+        $this->cc = $info['cc'];
+        $this->dc = isset($info['dc']) ? $info['dc'] : NULL;
+        $this->dm = isset($info['dm']) ? $info['dm'] : NULL;
     }
     
     public function setSubject($subject) {
@@ -174,6 +180,14 @@ class Email {
 
     public function setToName($toName) {
         $this->toName = $toName;
+    }
+    
+    public function getCc() {
+        return $this->cc;
+    }
+
+    public function setCc($cc) {
+        $this->cc = $cc;
     }
     
 }

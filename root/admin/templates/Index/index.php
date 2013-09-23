@@ -1,5 +1,3 @@
-<div class="container">
-    <h1>Admin</h1>
     <div class="well">
         <div class="row-fluid">
             <div class="span10">
