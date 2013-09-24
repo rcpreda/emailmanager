@@ -76,10 +76,6 @@ class Email {
         if (!isset($info['from']) || !$info['from'])
             throw new \Exception('From email missing!');
         
-        if (!isset($info['to']) || !$info['to'])
-            throw new \Exception('From email missing!');
-        
-        
         $this->emailId = isset($info['emailId']) ? $info['emailId'] : NULL;
         $this->emailName = $info['emailName'];
         $this->subject = $info['subject'];
@@ -90,8 +86,8 @@ class Email {
         $this->toName = $info['toName'];
         $this->bcc = $info['bcc'];
         $this->cc = $info['cc'];
-        $this->dc = isset($info['dc']) ? $info['dc'] : NULL;
-        $this->dm = isset($info['dm']) ? $info['dm'] : NULL;
+        $this->dc = isset($info['dc']) ? $info['dc'] : date('Y-m-d H:i:s');
+        $this->dm = isset($info['dm']) ? $info['dm'] : date('Y-m-d H:i:s');
     }
     
     public function setSubject($subject) {

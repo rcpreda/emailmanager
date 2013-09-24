@@ -23,8 +23,8 @@
                                 <td><?php echo htmlspecialchars($email->getFrom()); ?></td>
                                 <td><?php echo htmlspecialchars($email->getDc()) ?></td>
                                 <td>
-                                    <a href="/admin/index/edit/?userId=<?php echo htmlspecialchars($email->getEmailId()); ?>" class="btn btn-mini btn-primary">Edit</a>
-                                    <a href="/admin/index/delete/?userId=<?php echo htmlspecialchars($email->getEmailId()); ?>" class="btn btn-mini btn-danger">Delete</a>
+                                    <a href="/admin/index/edit/?emailId=<?php echo htmlspecialchars($email->getEmailId()); ?>" class="btn btn-mini btn-primary">Edit</a>
+                                    <a href="/admin/index/delete/?emailId=<?php echo htmlspecialchars($email->getEmailId()); ?>" class="btn btn-mini btn-danger">Delete</a>
                                 </td>
                             </tr>
                         <?php } } else { ?>
